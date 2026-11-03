@@ -1,0 +1,16 @@
+services:
+  revenue-intelligence:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      APP_ENV: development
+      HOST: 0.0.0.0
+      ALLOW_DEVELOPMENT_HEADER_AUTH: "true"
+      DATA_DIR: /var/lib/revenue
+    volumes:
+      - revenue-runtime:/var/lib/revenue
+    security_opt:
+      - no-new-privileges:true
+volumes:
+  revenue-runtime:

@@ -1,0 +1,3 @@
+# Optional Python packages used only by the Jupyter/Colab visualization cells.
+matplotlib>=3.8,<4
+jupyter>=1,<2
